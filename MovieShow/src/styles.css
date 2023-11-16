@@ -18,3 +18,9 @@ tr:hover{
     background-color: yellow;
     color : blueviolet
 }
+h1{
+    text-align: center;
+    background-color: deeppink;
+    color : silver;
+    font-family: cursive;
+}
