@@ -10,6 +10,17 @@ export class DeletemovieComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
+
+
+
+
+
+
+
+
+
+
