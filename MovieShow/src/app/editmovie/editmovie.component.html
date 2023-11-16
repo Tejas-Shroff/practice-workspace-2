@@ -7,7 +7,7 @@
 <form (ngSubmit) = "saveData(moviedata)" #movieform ="ngForm">
     <div>
         <label for ="id">Id</label>
-        <input type="text" id = "id" name="name"  readonly [(ngModel)] = "movie">
+        <input type="text" id = "id" name="name"  readonly [(ngModel)] = "moviedata.id">
     </div>
     <div>
         <label for = "name"> Movie Name </label>
