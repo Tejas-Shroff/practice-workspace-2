@@ -1,5 +1,27 @@
 <p>add-movie works!</p>
 <h1>Adding Movies</h1>
 
+<hr>
+<form (ngSubmit) = "saveData(moviedata)" movieform ="ngForm">
+    <div>
+        <label for = "name"> Movie Name </label>
+        <input type ="text" id ="name" name = "name" placeholder = "Enter movie name" [(ngModel)] = "moviedata.name"
+        required #name = "ngModel">
+    </div>
+
+    <div>
+        <label for = "rating"> Rating</label>
+        <input type ="text" id ="rating" name = "rating" placeholder = "Enter Rating" [(ngModel)] = "moviedata.rating"
+        #rating = "ngModel" min = "1" max = >
+    </div>
+
+    <div>
+        <label for = "name"> Movie Name </label>
+        <input type ="text" id ="name" name = "name" placeholder = "Enter movie name" [(ngModel)] = "moviedata.name"
+        required #name = "ngModel">
+    </div>
+
+</form>
+
 
 
