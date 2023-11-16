@@ -1,4 +1,18 @@
+
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using MovieApp.Models;
 var builder = WebApplication.CreateBuilder(args);
+var ConnectionString=builder.Configuration.GetConnectionString("mycon");
+builder.Services.AddDbContext<MovieContext>(options=>options.UseSqlServer("User ID=sa;password=examlyMssql@123; server=localhost;Database=EntDb;trusted_connection=false;Persist Security Info=False;Encrypt=False"));
+
+builder.Services.AddCors(
+    options=>{
+        options.AddDefaultPolicy(builder =>
+        {
+            builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+        });
+    });
 
 // Add services to the container.
 
@@ -17,7 +31,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseRouting();
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();

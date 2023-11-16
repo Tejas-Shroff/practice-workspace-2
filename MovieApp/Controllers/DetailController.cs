@@ -2,7 +2,7 @@
 //Controller Detail Controller
 
 using MovieApp.Models;
-using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System;
 // namespace MovieApp.Controllers{
