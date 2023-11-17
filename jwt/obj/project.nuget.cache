@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Nsti/E6pH0zTDy6qOGykady/6YqUZxc42SUNaZae1FfBeKqNf0QqavP4Sz3yccQXubwpBPk/xGte0JAUSJNwg==",
+  "dgSpecHash": "bDlCnzT98FDVEgjCcyitBkg05HroBe7AbuHZcrgIEazOdxUTLEwlf074kP2M9scv34OOMdjXfbXYA6pucbTILg==",
   "success": true,
-  "projectFilePath": "/home/coder/project/workspace/jwt_Auth_Webapi/jwt_Auth_Webapi.csproj",
+  "projectFilePath": "/home/coder/project/workspace/jwt/jwt.csproj",
   "expectedPackageFiles": [
     "/home/coder/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.0/microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "/home/coder/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

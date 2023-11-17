@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
-namespace jwt_Auth_Webapi.Controllers;
+namespace jwt.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -17,6 +18,7 @@ public class WeatherForecastController : ControllerBase
     {
         _logger = logger;
     }
+    [Authorize]   //Authorization
 
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/coder/project/workspace/jwt_Auth_Webapi/jwt_Auth_Webapi.csproj": {}
+    "/home/coder/project/workspace/jwt/jwt.csproj": {}
   },
   "projects": {
-    "/home/coder/project/workspace/jwt_Auth_Webapi/jwt_Auth_Webapi.csproj": {
+    "/home/coder/project/workspace/jwt/jwt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/coder/project/workspace/jwt_Auth_Webapi/jwt_Auth_Webapi.csproj",
-        "projectName": "jwt_Auth_Webapi",
-        "projectPath": "/home/coder/project/workspace/jwt_Auth_Webapi/jwt_Auth_Webapi.csproj",
+        "projectUniqueName": "/home/coder/project/workspace/jwt/jwt.csproj",
+        "projectName": "jwt",
+        "projectPath": "/home/coder/project/workspace/jwt/jwt.csproj",
         "packagesPath": "/home/coder/.nuget/packages/",
-        "outputPath": "/home/coder/project/workspace/jwt_Auth_Webapi/obj/",
+        "outputPath": "/home/coder/project/workspace/jwt/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/coder/.nuget/NuGet/NuGet.Config"
