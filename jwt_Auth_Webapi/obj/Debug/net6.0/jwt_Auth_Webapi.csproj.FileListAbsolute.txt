@@ -1,0 +1,7 @@
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.csproj.AssemblyReference.cache
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.AssemblyInfoInputs.cache
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.AssemblyInfo.cs
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.csproj.CoreCompileInputs.cache
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.MvcApplicationPartsAssemblyInfo.cs
+/home/coder/project/workspace/jwt_Auth_Webapi/obj/Debug/net6.0/jwt_Auth_Webapi.MvcApplicationPartsAssemblyInfo.cache
