@@ -1,3 +1,11 @@
+// Add these three lines
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +14,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAuthentication(opt => {
+    opt.DefaultAuthenticateSchema = JwtBearerDefaults.AuthenticationSchema;
+    opt.DefaultAuthenticateSchema = JwtBearerDefaults.AuthenticationSchema;
+})
+    .AddJw
+
+
 
 var app = builder.Build();
 
