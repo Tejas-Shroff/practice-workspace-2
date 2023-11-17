@@ -19,14 +19,17 @@ namespace jwt.Controllers
                 return BadRequest("Invalid Client request");
             }
             // code to access the username and password
-            
+
             if(user.UserName =="Tom"  && user.Password =="Jerry"){
 
                 var SecretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
                 var signingCredentials = new SigningCredentials(secretKey,SecurityAlgorithms.HmacSha256);
                 var tokenOptions = new JwtSecurityToken(
+                    issuer : "http//0.0.0.0:8080",
+                    audience : "http//0.0.0.0:8080",
+                    claims : new List
                     
-                )
+                );
 
             }
         }
