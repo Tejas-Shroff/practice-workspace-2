@@ -3,20 +3,40 @@
 <h2>Adding Details</h2>
 <hr>
 <form (ngSubmit) ="savedata(detailsdata) " #detailsform ="ngForm">
-    <div class ="container jumbotron" style ="width: 500px;"
+    <div class ="container jumbotron" style ="width: 500px;">
     <label for = "actor"> Actor Name </label>
-    <input type = "text" id = "name" name="name" [(ngModel)] ="detailsdata.actor #actor ="ngModel" class="from-control">
+    <input type = "text" id = "name" name="name" [(ngModel)] ="detailsdata.actor" #actor="ngModel" class="from-control">
     </div>
 
-    <div class ="container jumbotron" style ="width: 500px;"
-    <label for = "actor"> Actor Name </label>
-    <input type = "text" id = "name" name="name" [(ngModel)] ="detailsdata.actor #actor ="ngModel" class="from-control">
+    <div>
+        <label for="MovieId">Actor Name</label>
+        <select id="MovieId" name="MovieId" [(ngModel)]="detailsdata.MovieId" class="form-control">
+            <option *ngFor="let sd of showdata" [value]="sd.id">
+                {{sd.Name}}
+            </option>
+        </select>
+    </div>
+ 
+    <div>
+        <label for="gender">Actor Name</label>
+        <input type="text" id="gender" name="gender" [(ngModel)]="detailsdata.gender" #gender="ngModel" class="form-control">
     </div>
 
     <div>
         <label for="Role">Select role</label>
-        <select id = "Role" name="Role" [(ngModel)] = "detailsdata.Role: class =
+        <select id = "Role" name="Role" [(ngModel)] = "detailsdata.Role" class ="form-control">
+           
+    
+            <option value = "Heroine"> Heroine</option>
+            <option value = "Heroine"> Heroine</option>
+            <option value = "Villain"> Villain</option>
+            <option value = "Comedian"> Comedian</option>
+        </select>
     </div>
+    <br><br>
+    <p>
+        <input type ='submit' value ='save' class ="btn btn-success" [disabled] ="!detailsform.valid">
+    </p>
 
 
 </form> 
