@@ -14,6 +14,8 @@ export class ListmovieComponent implements OnInit {
 
     this.ms.getAllMovies().subscribe(data => { this.moviedata.push(...data)})
     console.log(this.moviedata)
+    this.ms.getAllMovies().subscribe(data =>{this.moviedata.push(...data)})
+    
 
   }
 
