@@ -10,11 +10,12 @@ export class LMComponent implements OnInit {
 
   data : any[] = []
 
-  constructor(private a: MserviceService) { }
+  constructor(private a: MserviceService) { 
 
   this.a.getAllMovies().subscribe( d => {
     this.data.push(...d)})
     console.log(this.data);
+  }
 
   ngOnInit() {
   }
