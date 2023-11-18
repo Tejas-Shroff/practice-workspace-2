@@ -11,6 +11,7 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
 import { EditmovieComponent } from './editmovie/editmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 import { ReactformComponent } from './reactform/reactform.component';
+import { CreatedetailsComponent } from './createdetails/createdetails.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ReactformComponent } from './reactform/reactform.component';
     EditmovieComponent,
     DeletemovieComponent,
     ReactformComponent,
+    CreatedetailsComponent,
     
   ],
   imports: [
