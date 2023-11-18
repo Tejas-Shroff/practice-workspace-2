@@ -9,10 +9,10 @@ table {
     align-items: center;
 }
 tr:nth-child(even){
-    background-color : lightgreen;
+    background-color : rgb(136, 165, 195);
 }
 tr:nth-child(odd){
-    background-color : lightgreen;
+    background-color : rgb(215, 226, 56);
 }
 tr:hover{
     background-color: yellow;
@@ -20,7 +20,7 @@ tr:hover{
 }
 h1{
     text-align: center;
-    background-color: blue;
+    background-color: rgb(137, 123, 15);
     color : silver;
     font-family: cursive;
 }
