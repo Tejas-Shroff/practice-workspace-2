@@ -1,6 +1,6 @@
 export interface Idetails {
     detailid : number
-    actor : string
+    Actor : string
     movieid : number
     gender : string
     Role : string

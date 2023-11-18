@@ -7,12 +7,11 @@ namespace MovieApp.Models{
         public int DetailId{get;set;}
         [Required]
         [MaxLength(30)]
-        public string ?Actors{get;set;}
+        public string ?Actor{get;set;}
         [ForeignKey("Movie")]
         public int MovieId{get;set;}
         public string ?Gender{get;set;}
         public string ?Role{get;set;}
         public Movie ?Movie{get;set;}
-
     }
 }
