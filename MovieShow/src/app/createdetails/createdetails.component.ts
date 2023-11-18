@@ -10,7 +10,7 @@ import { Idetails } from '../model/idetails';
 })
 export class CreatedetailsComponent implements OnInit {
 
-  detailsdata : Idetails = { detailid : 0 , actor: '' , movieid: 0 , gender : '' , Role : ''}
+  detailsdata : Idetails = { detailid : 0 , Actor: '' , movieid: 0 , gender : '' , Role : ''}
   showdata: any[] =[]
 
   constructor(private ms : MovieserviceService ,private router: Router) {
