@@ -14,12 +14,12 @@
             <tr *ngFor="let m of d">
                 <td>{{m.id}}</td>
                 <td>{{m.name}}</td>
-                <td>{{m.yearRelaese}}</td>
+                <td>{{m.yearRelease}}</td>
                 <td>{{m.rating}}</td>
                 <td>
-                    <a [routerLink]="['/find/',m.Id]">Details</a>
-                    <a [routerLink]="['/edit/',m.Id]">Edit</a>
-                    <a [routerLink]="['/delete/',m.Id]">Delete</a>
+                    <a [routerLink]="['/find/',m.Id]">Details</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a [routerLink]="['/edit/',m.Id]">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a [routerLink]="['/delete/',m.Id]">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
         </tbody>
         </table>
