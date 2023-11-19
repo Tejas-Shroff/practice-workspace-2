@@ -22,6 +22,6 @@ export class MServiceService {
 
   httpOptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
   addMovie(movie : Imovie) : Observable<Imovie>{
-    return this.httpclient.post<Imovie>(this.url + '/addMovie' + movie ,this.httpOptions)
+    return this.httpclient.post<Imovie>(this.url + '/AddMovie', movie ,this.httpOptions)
   }
 }

@@ -16,7 +16,7 @@ export class AddmovieComponent implements OnInit {
   saveData (movie : Imovie) : void {
     this.a.addMovie(this.p).subscribe(() => {
       alert('Record added Sucessfully')
-      this.r.navigate['/listmovies']
+      this.r.navigate(['/listmovies'])
     })
   }
 
