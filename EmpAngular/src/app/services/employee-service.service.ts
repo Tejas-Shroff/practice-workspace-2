@@ -7,8 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeServiceService {
 
+  private url = ''
+
   constructor(private httpclient : HttpClient) { }
-  listmovies : Observable<any[]>{
-    return this.httpclient.get.<any[]>(this.url + )
+  listemployee : Observable<any[]>{
+    return this.httpclient.get.<any[]>(this.url + '/')
   }
 }
