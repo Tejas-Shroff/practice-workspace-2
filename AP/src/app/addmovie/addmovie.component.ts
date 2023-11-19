@@ -10,10 +10,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AddmovieComponent implements OnInit {
 
-  p : Imovie = {id : 0 , name : '', rating : 0, yearRelease : 0}
+  p : Imovie = {Id : 0 , Name : '', Rating : 0, YearRelease : 0}
 
   constructor(private a : MServiceService ,private ar : ActivatedRoute , private r :Router) { }
-  saveData ()
+  saveData (movie : Imovie) : void {
+    this.a.addMovie(this.p).subscribe(() => {
+      alert('Record added Sucessfully')
+      this.r.navigate['/listmovies']
+    })
+  }
 
   ngOnInit() {
   }

@@ -1,1 +1,10 @@
 <p>addmovie works!</p>
+
+<h1>Adding Movies</h1>
+
+<form (ngSubmit) ="saveData(d)" #movieform ="ngForm">
+    <div>
+        <label for ="name"> Movie name </label>
+        <input type ="text" id ="name" name ="name" placeholder="Enter movie name" []
+    </div>
+</form>
