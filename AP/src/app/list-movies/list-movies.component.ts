@@ -11,7 +11,8 @@ export class ListMoviesComponent implements OnInit {
 
   constructor(private a : MServiceService) { 
     
-    this.a.getAllMovies().subscribe( dl => {this.d.push(...dl)})
+    this.a.getAllMovies().subscribe( data => {this.d.push(...data)})
+    console.log(this.d)
   }
 
   ngOnInit() {

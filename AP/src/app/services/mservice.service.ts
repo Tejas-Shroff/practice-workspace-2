@@ -8,7 +8,7 @@ import { HttpClient , HttpHeaders} from '@angular/common/http';
 })
 export class MServiceService {
 
-  private url = ''
+  private url = 'https://8080-eccdeabbadafaabfabcaaaceeafebecebbffdafdefabcc.premiumproject.examly.io/Movie';
 
   constructor(private httpclient : HttpClient) { }
 
