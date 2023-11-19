@@ -9,7 +9,7 @@ import { FindemployeeComponent } from './findemployee/findemployee.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { EditemployeeComponent } from './editemployee/editemployee.component';
 import { DeleteemployeeComponent } from './deleteemployee/deleteemployee.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    Reactive
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

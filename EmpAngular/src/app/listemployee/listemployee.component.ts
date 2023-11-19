@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeServiceService } from '../services/employee-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-listemployee',
@@ -7,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListemployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private es : EmployeeServiceService , private ar : ActivatedRoute , private route : Router) { }
 
+  
   ngOnInit() {
   }
 
