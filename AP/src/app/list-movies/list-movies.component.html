@@ -1,1 +1,104 @@
 <p>list-movies works!</p>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1> Movie Listing </h1>
+        
+        <thead>
+            <th>
+                Id
+            </th>
+            
+            <th>
+                Name
+            </th>
+
+            <th>
+                YearRelease
+            </th>
+
+            <th>
+                Rating
+            </th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor = "let m of d">
+                <td>
+                    {{m.Id}}
+                </td>
+
+                <td>
+                    {{m.Name}}
+                </td>
+
+                <td>
+                    {{m.YearRelaese}}
+                </td>
+
+                <td>
+                    {{m.Rating}}
+                </td>
+
+                <td>
+                    <a [routerLink] = "['/find/',m.Id]" >
+                       
+                        Details
+
+                    </a>
+
+                    <a [routerLink] = "['/edit/',m.Id]" >
+                       
+                        Edit
+
+                    </a>
+
+                    <a [routerLink] = "['/delete/',m.Id]" >
+                       
+                        Delete
+
+                    </a>
+                </td>
+        </tbody>
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class =jumbotron>
+        <h1> Movie Listing </h1>
+        <table class="table">
+            <thead>
+                <th>
+                    Id
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let m of d">
+                    <td>
+                        {{m.Id}}
+                    </td>
+                    <td>
+                        <a [routerLink] = " ['/find/' , m.Id] "> Details </a>
+                    </td>
+            </tbody>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
