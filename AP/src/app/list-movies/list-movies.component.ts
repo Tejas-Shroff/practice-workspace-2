@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MServiceService } from '../services/mservice.service';
+import { Imovie } from '../model/imovie';
 
 @Component({
   selector: 'app-list-movies',
@@ -7,7 +8,7 @@ import { MServiceService } from '../services/mservice.service';
   styleUrls: ['./list-movies.component.css']
 })
 export class ListMoviesComponent implements OnInit {
-  d: any[] = [];
+  d: Imovie[] = [];
 
   constructor(private a : MServiceService) { 
     

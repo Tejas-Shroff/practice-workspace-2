@@ -1,65 +1,30 @@
 <p>list-movies works!</p>
 
-<div class="container">
-    <div class="jumbotron">
+<div class ="container
+    <div class ="jumbotron>
         <h1> Movie Listing </h1>
-        
-        <thead>
-            <th>
-                Id
-            </th>
-            
-            <th>
-                Name
-            </th>
-
-            <th>
-                YearRelease
-            </th>
-
-            <th>
-                Rating
-            </th>
-        </thead>
-
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>YearRelease</th>
+                <th>Rating</th>
+            </thead>
         <tbody>
-            <tr *ngFor = "let m of d">
+            <tr *ngFor="let m of d">
+                <td>{{m.id}}</td>
+                <td>{{m.name}}</td>
+                <td>{{m.yearRelaese}}</td>
+                <td>{{m.rating}}</td>
                 <td>
-                    {{m.Id}}
-                </td>
-
-                <td>
-                    {{m.Name}}
-                </td>
-
-                <td>
-                    {{m.YearRelaese}}
-                </td>
-
-                <td>
-                    {{m.Rating}}
-                </td>
-
-                <td>
-                    <a [routerLink] = "['/find/',m.Id]" >
-                       
-                        Details
-
-                    </a>
-
-                    <a [routerLink] = "['/edit/',m.Id]" >
-                       
-                        Edit
-
-                    </a>
-
-                    <a [routerLink] = "['/delete/',m.Id]" >
-                       
-                        Delete
-
-                    </a>
+                    <a [routerLink]="['/find/',m.Id]">Details</a>
+                    <a [routerLink]="['/edit/',m.Id]">Edit</a>
+                    <a [routerLink]="['/delete/',m.Id]">Delete</a>
                 </td>
         </tbody>
+        </table>
+
+       
 
 
 
@@ -67,7 +32,8 @@
 
 
 
-<!-- <div class="container">
+
+        <!-- <div class="container">
     <div class =jumbotron>
         <h1> Movie Listing </h1>
         <table class="table">
@@ -87,18 +53,41 @@
             </tbody>
     </div> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- <p>listmovie works!</p>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Movie Listing</h1>
+        <table class="table">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Year</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor = " let m of d" >
+                    <td>
+                        {{m.id}}
+                    </td>
+                    <td>
+                        {{m.name}}
+                    </td>
+                    <td>
+                        {{m.rating}}
+                    </td>
+                    <td>
+                        {{m.yearRelease}}
+                    </td>
+                    <td>
+                        <a [routerLink] ="['/find/', m.id]">Details</a>  &nbsp;&nbsp;&nbsp;
+                        
+                        <a [routerLink] ="['/edit/', m.id]">Edit</a> &nbsp;&nbsp;&nbsp;
+                        
+                        <a [routerLink] ="['/delete/', m.id]">Delete</a> &nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
