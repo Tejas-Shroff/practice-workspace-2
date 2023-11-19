@@ -11,7 +11,7 @@
     <div>
         <label for ="rating"> Movie name </label>
         <input type ="text" id ="rating" name ="rating" placeholder="Enter rating" [(ngModel)] ="p.rating"
-        #rating ="ngModel" min ="1", max="10">
+        #rating ="ngModel" min ="1" max="10">
     </div>
     <div>
         <label for ="yearRelease">Release year</label>
@@ -19,6 +19,6 @@
         required #yearRelease = "ngModel">
     </div>
 
-    <input type ="submit" value ="save" class = "btn btn-Success" [disabled] ="!movieform.valid>
-    
+    <input type ="submit" value ="save" class = "btn btn-Success" [disabled] ="!movieform.valid">
+
 </form>

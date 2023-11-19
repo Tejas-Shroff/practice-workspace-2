@@ -9,6 +9,7 @@ import { FindmovieComponent } from './findmovie/findmovie.component';
 import { AddmovieComponent } from './addmovie/addmovie.component';
 import { EditmovieComponent } from './editmovie/editmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,10 @@ import { DeletemovieComponent } from './deletemovie/deletemovie.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
