@@ -1,0 +1,9 @@
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.csproj.AssemblyReference.cache
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.AssemblyInfoInputs.cache
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.AssemblyInfo.cs
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.csproj.CoreCompileInputs.cache
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.MvcApplicationPartsAssemblyInfo.cs
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.MvcApplicationPartsAssemblyInfo.cache
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.RazorAssemblyInfo.cache
+/home/coder/project/workspace/demowebapi/obj/Debug/net6.0/demowebapi.RazorAssemblyInfo.cs
