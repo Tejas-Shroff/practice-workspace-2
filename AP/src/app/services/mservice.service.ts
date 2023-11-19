@@ -17,6 +17,11 @@ export class MServiceService {
     return this.httpclient.get<any[]>(this.url +'/ListMovies');
   }
   getMovie(id : number) : Observable<Imovie>{
-    return this.httpclient.get<Imovie>(this.url +'/ListMovies' + id)
+    return this.httpclient.get<Imovie>(this.url +'/ListMovies/' + id)
+  }
+
+  httpOptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
+  addMovie(movie : Imovie) : Observable<Imovie>{
+    return this.httpclient.post<Imovie>(this.url + '/ListMovies' + movie ,this.httpOptions)
   }
 }

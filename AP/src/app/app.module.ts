@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { ListMoviesComponent } from './list-movies/list-movies.component';
 import { MenuComponent } from './menu/menu.component';
 import { FindmovieComponent } from './findmovie/findmovie.component';
+import { AddmovieComponent } from './addmovie/addmovie.component';
+import { EditmovieComponent } from './editmovie/editmovie.component';
+import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListMoviesComponent,
     MenuComponent,
-    FindmovieComponent
+    FindmovieComponent,
+    AddmovieComponent,
+    EditmovieComponent,
+    DeletemovieComponent
   ],
   imports: [
     BrowserModule,
