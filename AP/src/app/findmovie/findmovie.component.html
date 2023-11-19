@@ -1,1 +1,12 @@
 <p>findmovie works!</p>
+
+<h3>details of movie</h3>
+<div>
+    Id : {{d.id}}
+    YearRelease : {{d.yearRelease}}
+    name : {{d.name}}
+</div>
+
+<a [routerLink] = "['/listmovie']">Back to list</a>
+
+<input type = "Submit" , value ="save" class = "bt btn-success" (click) ="show">
