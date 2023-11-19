@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MServiceService } from '../services/mservice.service';
 import { Imovie } from '../model/imovie';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-findmovie',
@@ -9,11 +10,19 @@ import { Imovie } from '../model/imovie';
 })
 export class FindmovieComponent implements OnInit {
 
-  constructor(private d : MServiceService,private ar : ActivatedRoute ,private r : Router) { }
+  constructor(private a : MServiceService,private ar : ActivatedRoute ,private r : Router) { }
   d : Imovie
-  id : Number
+  id : number
 
   ngOnInit() {
+    const tid = this.ar.snapshot.paramMap.get('id')
+    this.id =Number(tid)
+    this.a.getMovie(this.id).subscribe((data : Imovie) => {
+      this.d = data
+    })
+  }
+  show(){
+    this.r.navigate(['/listmovies'])
   }
 
 }
