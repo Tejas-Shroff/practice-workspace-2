@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-namespace Demowebapi.Model;
+namespace demowebapi.Models;
 using System.Collections.Generic;
  
 public class Department{

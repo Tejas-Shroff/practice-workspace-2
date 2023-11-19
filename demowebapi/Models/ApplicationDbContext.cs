@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
  
-namespace Demowebapi.Model;
+namespace demowebapi.Models;
  
 public class ApplicationDbContext:DbContext{
  
