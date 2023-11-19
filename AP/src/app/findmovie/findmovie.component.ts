@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MServiceService } from '../services/mservice.service';
+import { Imovie } from '../model/imovie';
 
 @Component({
   selector: 'app-findmovie',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindmovieComponent implements OnInit {
 
-  constructor() { }
+  constructor(private d : MServiceService,private ar : ActivatedRoute ,private r : Router) { }
+  d : Imovie
+  id : Number
 
   ngOnInit() {
   }
