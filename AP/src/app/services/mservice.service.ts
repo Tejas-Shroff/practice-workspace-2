@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { H}
+import { Observable, from } from 'rxjs';
+import { HttpClient , HttpHeaders} from '@angular/common/http';
 
 
 @Injectable({
@@ -13,6 +13,6 @@ export class MServiceService {
   constructor(private httpclient : HttpClient) { }
 
   getAllMovies() : Observable<any[]> {
-    return this.httpclient.get<any[]>(this.url +'/ListMovies')
+    return this.httpclient.get<any[]>(this.url +'/ListMovies');
   }
 }
