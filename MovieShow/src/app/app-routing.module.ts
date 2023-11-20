@@ -7,10 +7,12 @@ import { EditmovieComponent } from './editmovie/editmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 import { ReactformComponent } from './reactform/reactform.component';
 import { CreatedetailsComponent } from './createdetails/createdetails.component';
+import { AuthGuard } from './guard/auth.guard';
+import { AuthService } from './services/auth.service';
 
 
 const routes: Routes = [
-  {path : 'listmovie',component : ListmovieComponent},
+  {path : 'listmovie',component : ListmovieComponent,canActivate : [AuthGuard]},
   {path : 'find/:id',component : FindmovieComponent },
   {path : 'AddMovie',component : AddMovieComponent },
   {path : 'edit/:id' , component : EditmovieComponent},
@@ -21,6 +23,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers : [AuthService]
 })
 export class AppRoutingModule { }
