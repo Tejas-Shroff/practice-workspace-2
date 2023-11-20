@@ -23,3 +23,6 @@ export class ListmovieComponent implements OnInit {
   }
 
 }
+
+
+
