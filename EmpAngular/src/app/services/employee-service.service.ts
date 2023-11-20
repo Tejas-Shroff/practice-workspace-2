@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { error } from 'protractor';
 import { Observable, throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators';
+import { IEmployee } from '../model/iemployee';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,10 @@ export class EmployeeServiceService {
     return this.httpclient.get<any[]>(this.url + '/ListEmployees').pipe(catchError(this.handleError));
 
 
+  }
+
+  getEmployee(id : number) : Observable<IEmployee>{
+    return this.httpclient.get<IEmployee>(this.url + '/ListEmployees' +id)
   }
 
   handleError (error : HttpErrorResponse){
