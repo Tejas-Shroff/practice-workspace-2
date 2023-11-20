@@ -1,5 +1,5 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { ApplicationRef, Injectable } from '@angular/core';
 import { error } from 'protractor';
 import { Observable, throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators';
@@ -22,7 +22,13 @@ export class EmployeeServiceService {
   }
 
   getEmployee(id : number) : Observable<IEmployee>{
-    return this.httpclient.get<IEmployee>(this.url + '/ListEmployees' +id)
+    return this.httpclient.get<IEmployee>(this.url + '/ListEmployees' +id).pipe(catchError(this.handleError));
+  }
+
+  httpOptions = {headers : new HttpHeaders ({'content-type' : 'application/json'})};
+
+  addEmployee(employeedata : IEmployee ) : Observable<IEmployee>{
+    return this.httpclient.post<IEmployee>(this.url + '/AddEmployee' + employeedata + this.httpOptions)
   }
 
   handleError (error : HttpErrorResponse){
