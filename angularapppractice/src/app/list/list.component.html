@@ -1,1 +1,23 @@
 <p>list works!</p>
+
+<h3> List Movies </h3>
+<div>
+    <div>
+        <table class = "table">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>yearRelease/th>
+                <th>rating</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of moviedata">
+                    <td>{{m.id}}</td>
+                    <td>{{m.name}}</td>
+                    <td>{{m.yearRelease}}</td>
+                    <td>{{m.rating}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

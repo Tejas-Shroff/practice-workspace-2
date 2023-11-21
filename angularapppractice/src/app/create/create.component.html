@@ -1,20 +1,13 @@
 <p>create works!</p>
 
-<h3> Adding Movies </h3>
-<div>
-    <div>
-        <table class = "table">
-            <thead>
-                <th>Id</th>
-                <th>Name</th>
-                <th>yearRelease/th>
-                <th>rating</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let m of moviedata">
-                    <td>{{m.id}}</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="container">
+    <div class="jumbotron">
+        <form (ngSubmit) ="saveData(moviedata)" #movieform ="mgFor">
+            <div>
+                <label for="id"> Enter Id</label>
+                <input type="text" id="id" name="id"placeholder ="Enter Id" [(ngModel)]="moviedata.name
+
+            </div>
+        </form>
     </div>
 </div>
