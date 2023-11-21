@@ -16,6 +16,7 @@
                     <td>{{m.name}}</td>
                     <td>{{m.yearRelease}}</td>
                     <td>{{m.rating}}</td>
+                    <td><a [routerLink]="['/EditMovie/',m.id]">Edit</a></td>
                 </tr>
             </tbody>
         </table>
