@@ -1,1 +1,20 @@
 <p>create works!</p>
+
+<h3> Adding Movies </h3>
+<div>
+    <div>
+        <table class = "table">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>yearRelease/th>
+                <th>rating</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of moviedata">
+                    <td>{{m.id}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
