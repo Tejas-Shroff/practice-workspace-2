@@ -26,7 +26,7 @@ export class EditmovieComponent implements OnInit {
     this.moviedata = movie
     this.ms.editMovie(this.moviedata).subscribe(() => {
       alert ("Record Edited")
-      this.route.navigate(['/listmovies'])
+      this.route.navigate(['/'])
     })
   }
 
