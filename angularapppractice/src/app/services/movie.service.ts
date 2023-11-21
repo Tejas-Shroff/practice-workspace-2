@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Movie } from '../model/movie';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient,HttpErrorResponse,HttpHeaders } from '@angular/common/http';
+import { catchError} from 'rxjs/operators';
 
 
 @Injectable({
@@ -14,17 +15,23 @@ export class MovieService {
   constructor(private httpclient : HttpClient) { }
 
   getMovies() : Observable<any[]>{
-    return this.httpclient.get<any[]>(this.url + 'ListMovies')
+    return this.httpclient.get<any[]>(this.url + 'ListMovies').pipe(catchError(this.handleError))
   }
   findMovie(id : number) : Observable<any[]>{
-    return this.httpclient.get<any[]>(this.url + 'ListMovies' + id)
+    return this.httpclient.get<any[]>(this.url + 'ListMovies' + id).pipe(catchError(this.handleError))
   }
   httpOptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
   addMovie( M : Movie) : Observable<Movie>{
-    return this.httpclient.post<Movie>(this.url + 'AddMovies', M ,this.httpOptions)
+    return this.httpclient.post<Movie>(this.url + 'AddMovie', M ,this.httpOptions)
   }
   editMovie(M : Movie) : Observable<Movie>{
-    return this.httpclient.put<Movie>(this.url + 'EditMovies' , M.id , M , this.httpOptions)
+    return this.httpclient.put<Movie>(this.url + 'EditMovie' + M.id , M , this.httpOptions)
   }
+  handleError (error : HttpErrorResponse){
+    var e = error.status + '\n' + error.statusText + '\n' + error.error
+    alert(e)
+    return throwError(e)
+  }
+
   
 }

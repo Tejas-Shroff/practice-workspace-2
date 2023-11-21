@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-create',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  
+
+  Mdata : any[] =[]
+
+  constructor(private ms : MovieService) {
+
+    this.ms.addMovie(this.Mdata).subscribe(
+      () => {
+
+      }
+    )
+
+  }
 
   ngOnInit() {
   }
