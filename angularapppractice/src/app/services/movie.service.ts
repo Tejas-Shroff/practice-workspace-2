@@ -10,7 +10,7 @@ import { catchError} from 'rxjs/operators';
 })
 export class MovieService {
 
-  private url = 'https://8080-eccdeabbadafaabfabcaaaceeafebecebbffdafdefabcc.premiumproject.examly.io/'
+  private url = 'https://8080-eccdeabbadafaabfabcaaaceeafebecebbffdafdefabcc.premiumproject.examly.io/Movie/'
 
   constructor(private httpclient : HttpClient) { }
 
@@ -18,7 +18,7 @@ export class MovieService {
     return this.httpclient.get<any[]>(this.url + 'ListMovies').pipe(catchError(this.handleError))
   }
   findMovie(id : number) : Observable<Movie>{
-    return this.httpclient.get<Movie>(this.url + 'ListMovies' + id).pipe(catchError(this.handleError))
+    return this.httpclient.get<Movie>(this.url + 'ListMovies' + id)
   }
   httpOptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
   addMovie( M : Movie) : Observable<Movie>{

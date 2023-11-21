@@ -1,24 +1,64 @@
-<p>edit works!</p>
+<!-- <p>edit works!</p>
 
 <h1> Editing Records </h1>
 
     <form (ngSubmit)="saveData(moviedata)" #movieform="ngForm">
+        <div>
+            <label for ="id">Id</label>
+            <input type="text" id = "id" name="name"  readonly [(ngModel)] = "moviedata.id">
+        </div>
         <div class="container">
             <label for="name"> Name </label>
             <input type="text" id="name" name="name" placeholder="Enter name" [(ngModel)]="moviedata.name"
-            required #name="ngModel"
+            required #name="ngModel">
         </div>
         <div class="container">
-            <label for="yearRelease"> Name </label>
-            <input type="text" id="yearRelease" name="yearRelease" placeholder="Enter yearRelease [(ngModel)]="moviedata.name"
-            required #name="ngModel"
+            <label for="yearRelease"> year Release </label>
+            <input type="text" id="yearRelease" name="yearRelease" placeholder="Enter yearRelease" [(ngModel)]="moviedata.name"
+            required #yearRelease="ngModel">
         </div>
         <div class="container">
-            <label for="name"> Name </label>
+            <label for="name"> rating </label>
             <input type="text" id="rating" name="rating" placeholder="Enter rating" [(ngModel)]="moviedata.name"
-            required #name="ngModel"
+            required #name="ngModel">
         </div>
         <br>
         <br>
         <input type ="submit" value="Save" class="btn btn-Success" [disabled]="!movieform.valid">
     </form>
+
+    <p>editmovie works!</p> -->
+
+<h1>Editing movies</h1>
+
+<hr>
+<form (ngSubmit) = "saveData(moviedata)" #movieform ="ngForm">
+    <div>
+        <label for ="id">Id</label>
+        <input type="text" id = "id" name="name"  readonly [(ngModel)] = "moviedata.id">
+    </div>
+    <div>
+        <label for = "name"> Movie Name </label>
+        <input type ="text" id ="name" name = "name" placeholder = "Enter movie name" [(ngModel)] = "moviedata.name"
+        required #name = "ngModel">
+    </div>
+
+    <div>
+        <label for = "rating"> Rating</label>
+        <input type ="text" id ="rating" name = "rating" placeholder = "Enter Rating" [(ngModel)] = "moviedata.rating"
+        #rating = "ngModel" min = "1" max = "5">
+    </div>
+
+    <div>
+        <label for = "year"> Release Year</label>
+        <input type ="text" id ="year" name = "year" placeholder = "Enter year" [(ngModel)] = "moviedata.yearRelease"
+        required #yearRelease = "ngModel">
+    </div>
+    <br>
+    <br>
+    <p>
+        <input type = "submit" value = "save" class = "btn btn-Success" [disabled] = "!movieform.valid">
+    </p>
+
+
+</form>
