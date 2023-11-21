@@ -32,7 +32,7 @@ export class EditComponent implements OnInit {
     )
   }
   gMovie( id : number ){
-    this.ms.getMovies(id).subscribe((data : Movie) => this.moviedata = data )
+    this.ms.findMovie(id).subscribe((data : Movie) => this.moviedata = data )
   }
 
   ngOnInit() {

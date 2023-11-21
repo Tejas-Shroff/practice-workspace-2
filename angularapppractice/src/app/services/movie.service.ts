@@ -17,8 +17,8 @@ export class MovieService {
   getMovies() : Observable<any[]>{
     return this.httpclient.get<any[]>(this.url + 'ListMovies').pipe(catchError(this.handleError))
   }
-  findMovie(id : number) : Observable<any[]>{
-    return this.httpclient.get<any[]>(this.url + 'ListMovies' + id).pipe(catchError(this.handleError))
+  findMovie(id : number) : Observable<Movie>{
+    return this.httpclient.get<Movie>(this.url + 'ListMovies' + id).pipe(catchError(this.handleError))
   }
   httpOptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
   addMovie( M : Movie) : Observable<Movie>{
