@@ -29,7 +29,8 @@ export class ReactformComponent implements OnInit {
     console.log(this.moviedata)
     this.ms.addMovie(this.moviedata).subscribe(
       () => {
-        alert('Record added Successfully'); this.route.navigate(['/listmovies'])
+        alert('Record added Successfully');
+        this.route.navigate(['/listmovies'])
       })
     }
 
