@@ -9,7 +9,7 @@ import { catchError} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MovieService {
-
+  // /DeleteMovie/5
   private url = 'https://8080-eccdeabbadafaabfabcaaaceeafebecebbffdafdefabcc.premiumproject.examly.io/Movie/'
 
   constructor(private httpclient : HttpClient) { }
@@ -26,6 +26,10 @@ export class MovieService {
   }
   editMovie(M : Movie) : Observable<Movie>{
     return this.httpclient.put<Movie>(this.url + 'EditMovie/' + M.id , M , this.httpOptions)
+  }
+
+  deleteMovie (M : Movie) : Observable<Movie>{
+    return this.httpclient.delete<Movie>(this.url + 'DeleteMovie/' +M.id , this.httpOptions)
   }
   handleError (error : HttpErrorResponse){
     var e = error.status + '\n' + error.statusText + '\n' + error.error

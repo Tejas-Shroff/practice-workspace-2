@@ -26,7 +26,7 @@ export class EditComponent implements OnInit {
       () => {
 
         alert("Record edited successfully")
-        this.r.navigate(['/ListMovies'])
+        this.r.navigate(['ListMovies'])
 
       }
     )
